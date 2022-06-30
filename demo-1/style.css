@@ -1,0 +1,185 @@
+@font-face {
+	font-display: swap;
+	font-family: "Vonique";
+	src: url('fonts/Vonique64.ttf') format('truetype');
+	font-weight: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: "Vonique Bold";
+	src: url('fonts/Vonique64Bold.ttf') format('truetype');
+	font-weight: 700;
+}
+@font-face {
+	font-display: swap;
+	font-family: "GothamBook";
+	src:  url('fonts/GothamBook.ttf') format('truetype');
+	font-weight: normal;
+}
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
+body {
+	background: #000000;
+	height: 100vh;
+	font-family: "GothamBook",sans-serif;
+}
+.loader {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.animateBorder {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 4px solid #03fdbd;*/
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+	}
+	span.top_border {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+span.bottom_border {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+h1 {
+	font-family: "Vonique", sans-serif;
+	margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 8rem;
+    font-weight: 500;
+    line-height: 1.2;
+	color: #03fdbd;
+	-webkit-mask-image: linear-gradient(-75deg, rgba(255,255,255,.4) 30%, #fff 50%, rgba(255,255,255,.4) 70%);
+	-webkit-mask-size: 200%;
+	animation: shine 2s linear infinite;
+}
+@keyframes shine {
+	from { -webkit-mask-position: 150%; }
+	to { -webkit-mask-position: -50%; }
+}
+
+.subtext {
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 300;
+	letter-spacing: 4px;
+	position: relative;
+	display: inline-block;
+}
+.subtext::before {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: -58%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.subtext::after {
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    right: -55%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body[data-aos-duration="3500"] [data-aos], [data-aos][data-aos][data-aos-duration="3500"] {
+ 	transition-duration: 3500ms;
+}
+body[data-aos-delay="3500"] [data-aos], [data-aos][data-aos][data-aos-delay="3500"] {
+ 	transition-delay: 0;
+}
+body[data-aos-delay="3500"] [data-aos].aos-animate, [data-aos][data-aos][data-aos-delay="3500"].aos-animate {
+ 	transition-delay: 3500ms;
+}
+
+body[data-aos-duration="4000"] [data-aos], [data-aos][data-aos][data-aos-duration="4000"] {
+ 	transition-duration: 4000ms;
+}
+body[data-aos-delay="4000"] [data-aos], [data-aos][data-aos][data-aos-delay="4000"] {
+ 	transition-delay: 0;
+}
+body[data-aos-delay="4000"] [data-aos].aos-animate, [data-aos][data-aos][data-aos-delay="4000"].aos-animate {
+ 	transition-delay: 4000ms;
+}
+
+body[data-aos-duration="4500"] [data-aos], [data-aos][data-aos][data-aos-duration="4500"] {
+ 	transition-duration: 4500ms;
+}
+body[data-aos-delay="4500"] [data-aos], [data-aos][data-aos][data-aos-delay="4500"] {
+ 	transition-delay: 0;
+}
+body[data-aos-delay="4500"] [data-aos].aos-animate, [data-aos][data-aos][data-aos-delay="4500"].aos-animate {
+ 	transition-delay: 4500ms;
+}
+
+body[data-aos-duration="5000"] [data-aos], [data-aos][data-aos][data-aos-duration="5000"] {
+ 	transition-duration: 5000ms;
+}
+body[data-aos-delay="5000"] [data-aos], [data-aos][data-aos][data-aos-delay="5000"] {
+ 	transition-delay: 0;
+}
+body[data-aos-delay="5000"] [data-aos].aos-animate, [data-aos][data-aos][data-aos-delay="5000"].aos-animate {
+ 	transition-delay: 5000ms;
+}
+
+[data-aos=anim1] {
+    background: linear-gradient(to left, #000 50%, #03fdbd 50%) right;
+    background-size: 203%;
+}
+[data-aos=anim1].aos-animate {
+    background-position: left;
+}
+
+
+@media (max-width: 1280px) {
+	h1 { font-size: 6rem !important; }
+}
+
+@media (max-width: 1024px) {
+	h1 { font-size: 5rem !important; }
+	.subtext { font-size: 0.75rem !important; letter-spacing: 4px !important; }
+}
+
+@media (max-width: 640px) {
+	.subtext::before {
+	    width: 25%;
+	    left: -30%;
+	}
+	.subtext::after {
+	    width: 25%;
+	    right: -30%;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 540px) {
+	h1 { font-size: 4rem !important; }
+	.subtext { font-size: 0.55rem !important; letter-spacing: 3px !important; }
+}
+
+@media (max-width: 480px) {
+	h1 { font-size: 3rem !important; }
+	.subtext { font-size: 0.6rem !important; letter-spacing: 3px !important; }
+}

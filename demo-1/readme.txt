@@ -1,0 +1,3 @@
+-- You can use this demo as a Page Loading Effect or Hero Screen Effect
+-- Text Animation
+-- Border Animation
